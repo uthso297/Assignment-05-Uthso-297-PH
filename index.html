@@ -21,11 +21,16 @@
             font-weight: 500;
             font-style: normal;
         }
+
+        .active {
+            transform: scale(0.95);
+            transition: transform 0.1s;
+        }
     </style>
 
 </head>
 
-<body class="lexend-font">
+<body id="body" class="lexend-font">
     <header class="sticky top-0 w-full z-10">
 
         <!-- navbar starts -->
@@ -43,7 +48,7 @@
                 <div>
                     <img src="assets/coin.png" alt="">
                 </div>
-                <p class="font-bold opacity-60 md:text-lg text-sm"><span>5500</span> BDT</p>
+                <p class="font-bold opacity-60 md:text-lg text-sm"><span id="final-balance">5500</span> BDT</p>
             </div>
         </nav>
         <!-- navbar ends -->
@@ -80,7 +85,7 @@
                         <img src="assets/coin.png" alt="">
                     </div>
                     <div>
-                        <p class="opacity-70"><span>100</span> BDT</p>
+                        <p class="opacity-70"><span id="noakhali-pre-amount">100</span> BDT</p>
                     </div>
                 </div>
                 <!-- Previous Donated Amount ends-->
@@ -92,11 +97,12 @@
                     disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                     relief efforts and making a positive impact on the lives of those in need.</p>
 
-                <input
+                <input id="noakhali-input-amount"
                     class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full md:placeholder:text-lg placeholder:text-xs"
                     type="text" placeholder="Write Donation Amount">
 
-                <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
+                <button id="noakhali-donate-btn"
+                    class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
                     Now</button>
 
 
@@ -117,7 +123,7 @@
                         <img src="assets/coin.png" alt="">
                     </div>
                     <div>
-                        <p class="opacity-70"><span>100</span> BDT</p>
+                        <p class="opacity-70"><span id="feni-pre-amount">100</span> BDT</p>
                     </div>
                 </div>
                 <!-- Previous Donated Amount ends-->
@@ -129,11 +135,12 @@
                     crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts
                     towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
-                <input
+                <input id="feni-input-amount"
                     class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full md:placeholder:text-lg placeholder:text-xs"
                     type="text" placeholder="Write Donation Amount">
 
-                <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
+                <button id="feni-donate-btn"
+                    class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
                     Now</button>
 
 
@@ -154,7 +161,7 @@
                         <img src="assets/coin.png" alt="">
                     </div>
                     <div>
-                        <p class="opacity-70"><span>100</span> BDT</p>
+                        <p class="opacity-70"><span id="quota-pre-amount">100</span> BDT</p>
                     </div>
                 </div>
                 <!-- Previous Donated Amount ends-->
@@ -167,26 +174,58 @@
                     donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
                     consider making a donation to support these brave individuals in their time of need.</p>
 
-                <input
+                <input id="quota-input-amount"
                     class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full md:placeholder:text-lg placeholder:text-xs"
                     type="text" placeholder="Write Donation Amount">
                 <br class="md:hidden block">
-                <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
+                <button id="quota-donate-btn"
+                    class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
                     Now</button>
 
 
             </div>
         </div>
 
+
+        <!-- Modal starts -->
+        <div id="modal"
+            class="fixed md:left-[35%] top-[35%] left-[10%] md:w-[25%] w-[80%] rounded-lg space-y-3 bg-white py-4 z-30 shadow-lg hidden">
+
+            <div class="space-y-2">
+                <h1 class="text-center text-3xl">Congrates!</h1>
+                <div class="flex items-start justify-center">
+                    <img src="assets/coin.png" alt="">
+                </div>
+            </div>
+            <div>
+                <p class="text-center text-sm opacity-70">You have donated for Humankind</p>
+                <h6 class="text-center font-bold">Successfully</h>
+            </div>
+
+            <div class="flex items-start justify-center">
+                <button id="modal-btn" class="bg-gray-300 px-3 py-2 rounded-lg opacity-70">Close Confirmation</button>
+            </div>
+
+        </div>
+
+        <!-- Modal ends -->
+
+
+
     </main>
 
     <footer class="bg-[#f8f7f3] h-32">
 
 
+
     </footer>
 
 
-</body>
 
+    <script src="js/commonFunction.js"></script>
+
+    <script src="js/donateMoney.js"></script>
+
+</body>
 
 </html>
