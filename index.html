@@ -31,18 +31,19 @@
         <!-- navbar starts -->
         <nav class="bg-[#F9F7F3] flex justify-around pt-6 pb-10">
             <div class="flex items-center">
-                <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80">Blog</button>
+                <button
+                    class="bg-[#B4F461] md:text-lg font-bold md:px-8 py-2 rounded-lg opacity-80 text-sm px-4">Blog</button>
             </div>
 
             <div class="flex items-center gap-3">
                 <img src="assets/logo.png" alt="">
-                <h4 class="text-lg font-bold opacity-70">Donate Bangladesh</h4>
+                <h4 class="text-lg font-bold opacity-70 hidden md:block">Donate Bangladesh</h4>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center md:gap-3 gap-1">
                 <div>
                     <img src="assets/coin.png" alt="">
                 </div>
-                <p class="font-bold opacity-60"><span>5500</span> BDT</p>
+                <p class="font-bold opacity-60 md:text-lg text-sm"><span>5500</span> BDT</p>
             </div>
         </nav>
         <!-- navbar ends -->
@@ -64,16 +65,17 @@
         <!-- Sub navbar ends -->
     </header>
 
-    <main class="grid grid-cols-1 grid-rows-3 gap-7 py-8 mx-20">
+    <main class="grid grid-cols-1 grid-rows-3 gap-7 py-8 md:mx-20 mx-10">
         <!-- Noakhali part -->
-        <div class="grid grid-cols-2 border-2 rounded-lg border-gray-200 p-10 space-x-5">
+        <div
+            class="grid md:grid-cols-2 grid-cols-1 border-2 rounded-lg border-gray-200 md:p-10 p-5 md:space-x-5 space-y-4 md:space-y-0">
             <div>
                 <img class="h-full" src="assets/noakhali.png" alt="">
             </div>
             <div class="flex flex-col justify-between">
                 <!-- Previous Donated Amount -->
                 <div
-                    class="flex items-center justify-center gap-2 px-4 py-2 bg-[#f3f3f3] rounded-lg w-1/3 whitespace-nowrap">
+                    class="flex items-center justify-center gap-2 px-4 py-2 bg-[#f3f3f3] rounded-lg md:w-1/3 w-full whitespace-nowrap">
                     <div>
                         <img src="assets/coin.png" alt="">
                     </div>
@@ -90,8 +92,9 @@
                     disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                     relief efforts and making a positive impact on the lives of those in need.</p>
 
-                <input class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full" type="text"
-                    placeholder="Write Donation Amount">
+                <input
+                    class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full md:placeholder:text-lg placeholder:text-xs"
+                    type="text" placeholder="Write Donation Amount">
 
                 <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
                     Now</button>
@@ -101,14 +104,15 @@
         </div>
 
         <!-- Feni part -->
-        <div class="grid grid-cols-2 border-2 rounded-lg border-gray-200 p-10 space-x-5">
+        <div
+            class="grid md:grid-cols-2 grid-cols-1 border-2 rounded-lg border-gray-200 md:p-10 p-5 md:space-x-5 space-y-4 md:space-y-0">
             <div>
                 <img class="h-full" src="assets/feni.png" alt="">
             </div>
             <div class="flex flex-col justify-between">
                 <!-- Previous Donated Amount -->
                 <div
-                    class="flex items-center justify-center gap-2 px-4 py-2 bg-[#f3f3f3] rounded-lg w-1/3 whitespace-nowrap">
+                    class="flex items-center justify-center gap-2 px-4 py-2 bg-[#f3f3f3] rounded-lg md:w-1/3 w-full whitespace-nowrap">
                     <div>
                         <img src="assets/coin.png" alt="">
                     </div>
@@ -125,8 +129,9 @@
                     crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts
                     towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
-                <input class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full" type="text"
-                    placeholder="Write Donation Amount">
+                <input
+                    class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full md:placeholder:text-lg placeholder:text-xs"
+                    type="text" placeholder="Write Donation Amount">
 
                 <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
                     Now</button>
@@ -136,14 +141,15 @@
         </div>
         <!-- Quota Movment part -->
 
-        <div class="grid grid-cols-2 border-2 rounded-lg border-gray-200 p-10 space-x-5">
+        <div
+            class="grid md:grid-cols-2 grid-cols-1 border-2 rounded-lg border-gray-200 md:p-10 p-5 md:space-x-5 space-y-4 md:space-y-0">
             <div>
                 <img class="h-full" src="assets/quota-protest.png" alt="">
             </div>
             <div class="flex flex-col justify-between">
                 <!-- Previous Donated Amount -->
                 <div
-                    class="flex items-center justify-center gap-2 px-4 py-2 bg-[#f3f3f3] rounded-lg w-1/3 whitespace-nowrap">
+                    class="flex items-center justify-center gap-2 px-4 py-2 bg-[#f3f3f3] rounded-lg md:w-1/3 w-full whitespace-nowrap">
                     <div>
                         <img src="assets/coin.png" alt="">
                     </div>
@@ -161,9 +167,10 @@
                     donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
                     consider making a donation to support these brave individuals in their time of need.</p>
 
-                <input class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full" type="text"
-                    placeholder="Write Donation Amount">
-
+                <input
+                    class="px-5 py-2 rounded-lg border-gray-200 border-2 w-full md:placeholder:text-lg placeholder:text-xs"
+                    type="text" placeholder="Write Donation Amount">
+                <br class="md:hidden block">
                 <button class="bg-[#B4F461] text-lg font-bold px-8 py-2 rounded-lg opacity-80 w-full">Donate
                     Now</button>
 
