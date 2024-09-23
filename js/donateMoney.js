@@ -3,7 +3,6 @@ const button = document.getElementById('noakhali-donate-btn');
 button.addEventListener('click', function () {
 
     // calculation
-
     const donateAmount = getInputFieldValueById('noakhali-input-amount');
     let finalBalance = getTextFieldValueById('final-balance');
 
@@ -11,20 +10,32 @@ button.addEventListener('click', function () {
         alert('Do not have sufficient balance');
         document.getElementById('noakhali-input-amount').value = '';
         return;
-    }
-    else {
+    } else {
         if (isNaN(donateAmount)) {
             alert('Please provide amount in number.');
-        }
-        else if (donateAmount < 0) {
-            alert('Please provide positive amount.Negative amount can not be accepted.')
-        }
-        else {
+        } else if (donateAmount < 0) {
+            alert('Please provide positive amount. Negative amount cannot be accepted.');
+        } else {
             document.getElementById('noakhali-input-amount').value = '';
             let preAmount = getTextFieldValueById('noakhali-pre-amount');
-            preAmount = preAmount + donateAmount;
+            preAmount += donateAmount;
             document.getElementById('noakhali-pre-amount').innerText = preAmount;
             calculateFinal(donateAmount);
+
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const currentTime = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            const div = document.createElement('div');
+            div.classList.add('mx-auto', 'border-2', 'rounded-lg', 'text-center', 'py-4', 'my-4');
+            div.innerHTML = `
+                <p>${donateAmount} Taka is Donated for Flood Relief at Noakhali, Bangladesh</p>
+                <p>Donation Time: ${currentTime}</p>
+            `;
+            document.getElementById('transaction-part').appendChild(div);
+
             showModalById('modal');
             document.getElementById('modal-btn').addEventListener('click', function () {
                 document.getElementById('modal').classList.add('hidden');
@@ -33,7 +44,7 @@ button.addEventListener('click', function () {
         }
     }
 
-    // added active button
+    // Add active button
     button.classList.add('active');
 
     setTimeout(removeActiveClass, 200);
@@ -42,6 +53,8 @@ button.addEventListener('click', function () {
         button.classList.remove('active');
     }
 });
+
+
 
 // feni
 
@@ -73,6 +86,24 @@ button1.addEventListener('click', function () {
             preAmount = preAmount + donateAmount;
             document.getElementById('feni-pre-amount').innerText = preAmount;
             calculateFinal(donateAmount);
+
+
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const currentTime = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            const div = document.createElement('div');
+            div.classList.add('mx-auto', 'border-2', 'rounded-lg', 'text-center', 'py-4', 'my-4');
+            div.innerHTML = `
+                <p>${donateAmount} Taka is Donated for Flood Relief at Feni, Bangladesh</p>
+                <p>Donation Time: ${currentTime}</p>
+            `;
+            document.getElementById('transaction-part').appendChild(div);
+
+
+
             showModalById('modal');
             document.getElementById('modal-btn').addEventListener('click', function () {
                 document.getElementById('modal').classList.add('hidden');
@@ -121,6 +152,26 @@ button2.addEventListener('click', function () {
             preAmount = preAmount + donateAmount;
             document.getElementById('quota-pre-amount').innerText = preAmount;
             calculateFinal(donateAmount);
+
+
+
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const currentTime = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            const div = document.createElement('div');
+            div.classList.add('mx-auto', 'border-2', 'rounded-lg', 'text-center', 'py-4', 'my-4');
+            div.innerHTML = `
+                <p>${donateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+                <p>Donation Time: ${currentTime}</p>
+            `;
+            document.getElementById('transaction-part').appendChild(div);
+
+
+
+
             showModalById('modal');
             document.getElementById('modal-btn').addEventListener('click', function () {
                 document.getElementById('modal').classList.add('hidden');

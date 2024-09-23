@@ -27,3 +27,12 @@ function calculateFinal(e) {
 
     document.getElementById('final-balance').innerText = finalBalance;
 }
+
+
+function showSectionById(id) {
+    document.getElementById('donation-part').classList.add('hidden');
+    document.getElementById('transaction-part').classList.add('hidden');
+
+
+    document.getElementById(id).classList.remove('hidden');
+}
