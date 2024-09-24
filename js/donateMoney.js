@@ -32,7 +32,12 @@ button.addEventListener('click', function () {
         const hours = now.getHours();
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
-        const currentTime = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        const day = now.getDate();
+        const month = now.getMonth() + 1;
+        const year = now.getFullYear();
+
+        const currentTime = `${day}/${month.toString().padStart(2, '0')}/${year} ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
 
         const div = document.createElement('div');
         div.classList.add('mx-auto', 'border-2', 'rounded-lg', 'text-center', 'py-4', 'my-4');
@@ -107,7 +112,12 @@ button1.addEventListener('click', function () {
         const hours = now.getHours();
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
-        const currentTime = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        const day = now.getDate();
+        const month = now.getMonth() + 1;
+        const year = now.getFullYear();
+
+        const currentTime = `${day}/${month.toString().padStart(2, '0')}/${year} ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
 
         const div = document.createElement('div');
         div.classList.add('mx-auto', 'border-2', 'rounded-lg', 'text-center', 'py-4', 'my-4');
@@ -177,7 +187,12 @@ button2.addEventListener('click', function () {
         const hours = now.getHours();
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
-        const currentTime = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        const day = now.getDate();
+        const month = now.getMonth() + 1;
+        const year = now.getFullYear();
+        
+        const currentTime = `${day}/${month.toString().padStart(2, '0')}/${year} ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
 
         const div = document.createElement('div');
         div.classList.add('mx-auto', 'border-2', 'rounded-lg', 'text-center', 'py-4', 'my-4');
@@ -207,5 +222,4 @@ button2.addEventListener('click', function () {
         button2.classList.remove('active');
     }
 });
-
 
