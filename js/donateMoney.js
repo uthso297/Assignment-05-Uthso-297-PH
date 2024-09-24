@@ -5,7 +5,6 @@ button.addEventListener('click', function () {
     // calculation
     const donateAmount = getInputFieldValueById('noakhali-input-amount');
     if (isNaN(donateAmount)) {
-        console.log(donateAmount);
         alert('Please provide amount in number.');
         document.getElementById('noakhali-input-amount').value = '';
         return;
@@ -14,7 +13,6 @@ button.addEventListener('click', function () {
 
 
     let finalBalance = getTextFieldValueById('final-balance');
-    console.log(donateAmount);
 
     if (donateAmount > finalBalance) {
 
@@ -222,4 +220,3 @@ button2.addEventListener('click', function () {
         button2.classList.remove('active');
     }
 });
-
